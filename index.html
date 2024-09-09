@@ -35,7 +35,6 @@
   <div class="container">
     <!-- ! Given btn for modal -->
     <div class="text-center mb-5">
-      <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button> -->
       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">
         Add Task
       </button>
@@ -50,24 +49,28 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id = taskForm>
+            <form action="" id="taskForm">
               <div class="mb-3">
-                <label for="taskTitle" class="col-form-label">Task Title</label>
-                <input type="text" class="form-control" id="taskTitleInput">
+                <label for="taskTitle">Task</label>
+                <input type="text" id="taskTitle" class="form-control">
               </div>
-              <div >
-                <label for="taskDateInput" class="col-form-label"> Due Date</label>
-                <input type="text" class="form-control" id="taskDateInput">
+              <div class="mb-3">  
+                <label for="taskDate">Due Date</label>
+                <input type="text" id="taskDate" class="form-control" placeholder="mm/dd/yyyy">
               </div>
               <div class="mb-3">
-                <label for="taskDescripInput" class="col-form-label">Task Description</label>
-                <textarea class="form-control" id="taskDescripInput"></textarea>
+                <label for="taskDescription">Description</label>
+                <textarea id="taskDescription"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="taskFormBtn" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Add Task</button>
               </div>
             </form>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!-- <div class="modal-footer">
+              <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               <button id="addTaskBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Add Task</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -82,6 +85,7 @@
             <h2 class="card-title mb-1">To Do</h2>
           </div>
           <div class="card-body bg-light">
+            <!-- ! lane to  append cards to -->
             <div id="todo-cards">
 
             </div>
@@ -94,6 +98,7 @@
             <h2 class="card-title mb-1">In Progress</h2>
           </div>
           <div class="card-body bg-light">
+            <!-- ! lane to append cards to -->
             <div id="in-progress-cards">
 
             </div>
@@ -106,6 +111,7 @@
               <h2 class="card-title mb-1">Done</h2>
             </div>
             <div class="card-body bg-light">
+              <!-- ! lane to append cards to -->
               <div id="done-cards">
                 
               </div>
@@ -130,3 +136,4 @@
 </body>
 
 </html>
+
